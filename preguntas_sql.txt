@@ -1,0 +1,31 @@
+1.- ¿Qué instrucción se emplea para eliminar todo el contenido de una
+tabla, pero conservando la tabla?
+
+truncate, es una instruccion para eliminar el contenido de una tabla de manera mas rapida y utilizando menor sistema de memoria, 
+es como una DELETE pero sin WHERE.
+
+statement para sql
+
+// truncate dataform;
+
+2.- Realice el query para cambiar "Rodríguez" por "Ramírez" en la columna
+"Apellido" de la tabla "Trabajadores", para todos los datos encontrados.
+Tanto en SQL como en Mongodb.
+
+statement para sql
+
+// update dataform set apellido = 'Ramirez' where 'Rodriguez';
+
+Statement para nosql
+
+// db.dataform.update({'apellido':'Rodriguez'}, {$set:{'apellido':'Ramirez'}},{multi:true})
+
+¿Puede una tabla tener más de una clave externa o foránea definida?
+
+Si. una tabla puede tener mas de una clave foranea definida(FK), sin embargo para tomar buenas practicas, se debe utilizar una tabla adicional que incluira los id's
+de las otras tablas que se desean asignar.
+
+¿Cuál es el valor más alto que se puede almacenar en un campo de
+datos de tipo BYTE?
+
+255 es el valor maximo para un BYTE
